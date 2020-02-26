@@ -1,4 +1,3 @@
+#!/usr/bin/env sh
 
-
-besttrace "$@"
-
+/usr/local/bin/besttrace "$@"
