@@ -1,6 +1,9 @@
-FROM debian:stretch
-RUN apt-get update && apt-get install -y wget unzip \
-   && apt-get remove --purge --auto-remove -y && rm -rf /var/lib/apt/lists/*
+FROM alpine:3
+
+RUN apk update -f \
+  && apk --no-cache add -f \
+  wget ca-certificates unzip
+
 
 COPY entrypoint.sh /entrypoint.sh
 
